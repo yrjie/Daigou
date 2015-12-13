@@ -5,20 +5,23 @@
 
     <form method="get" action=".">
         <table>
-            {{ form.as_table }}
             <tr>
-                <td>&nbsp;</td>
+                <td>
+                    <input name=q value="">
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <input type="submit" value="Search">
                 </td>
             </tr>
         </table>
-
+        <input type="hidden" name="models" value="Daigou.product">
         {% if query %}
             <h3>Results</h3>
             {% for result in page.object_list %}
                 <p>
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>
+                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a>
                 </p>
             {% empty %}
                 <p>No results found.</p>
