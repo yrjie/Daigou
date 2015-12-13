@@ -1,6 +1,6 @@
 import datetime
 from haystack import indexes
-from Daigou.models import Note
+from models import Note
 
 class NoteIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
