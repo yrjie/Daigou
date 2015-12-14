@@ -1,22 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://www.smzdm.com/p/733049 -->
 <html>
-    <head>
-        <title>代个购</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">代个购</a></h1>
-        </div>
+<head>
+    <title>代个购</title>
+    <link rel="stylesheet" href="/{{ BASE_URL }}static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/{{ BASE_URL }}static/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/{{ BASE_URL }}static/css/icon.css" type="text/css">
+    <!--[if !IE]><!-->
+    <link rel="stylesheet" href="/{{ BASE_URL }}static/css/icon_notIE.css" type="text/css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="/{{ BASE_URL }}static/css/main.css" type="text/css"> 
+    <link rel="stylesheet" href="/{{ BASE_URL }}static/css/navBar.css" type="text/css">
+</head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">代个购</a></h1>
+    </div>
 
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
                 {% block content %}
                 {% endblock %}
-                </div>
             </div>
         </div>
-    </body>
+    </div>
+    <!--header-->
+    <header>
+        <!--navBarWrap-->
+        <div class="navBarWrap no_fixed">
+            <!--navBar-->
+            <div class="navBar">
+                <nav>
+                    <a href="/{{ BASE_URL }}">首页</a>
+                    <a href="/{{ BASE_URL }}">注册</a>
+                    <a href="/{{ BASE_URL }}">登录</a>
+                </nav>
+                <!-- new loginarea start-->
+                <div class="loginArea" id="zhiyouLoginArea" data-ishidelogin="0">
+                </div>
+                <!-- new loginarea end-->
+                <div class="clear"></div>
+            </div>
+            <!--navBar end-->
+        </div>
+    </header>
+</body>
 </html>
