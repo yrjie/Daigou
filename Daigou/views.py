@@ -1,4 +1,8 @@
 from haystack.generic_views import SearchView
+from django.shortcuts import render
+from django.shortcuts import render_to_response
+from django.shortcuts import redirect
+from django.template import RequestContext
 
 class MySearchView(SearchView):
     """My custom search view."""
@@ -12,3 +16,6 @@ class MySearchView(SearchView):
         context = super(MySearchView, self).get_context_data(*args, **kwargs)
         # do something
         return context
+
+def home(request):
+    return render_to_response("index.html", context_instance=RequestContext(request))
